@@ -22,3 +22,358 @@
 
 // Pages
 @import "pages/all";
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,200i,300,300i,400,400i,500,500i,600,600i,700,800&display=swap');
+
+@font-face {
+    font-family: 'Bebas Neue Bold';
+    src: url(../fonts/BebasNeue-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Bebas Neue Book';
+    src: url(../fonts/BebasNeue-Book.ttf);
+}
+
+@font-face {
+    font-family: 'Bebas Neue Regular';
+    src: url(../fonts/BebasNeue-Regular.ttf);
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    color: #ffffff;
+}
+
+.main-header {
+    overflow: hidden;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.main-header {
+    width: 100%;
+    padding: 17px 130px 0;
+    background-color: #05c5ff;
+    background-image: url(../img/cloud1.png), linear-gradient(180deg, rgba(27, 55, 77, 0) 0%, #1b374d 100%), url(../img/bg.png);
+    background-repeat: repeat-x, no-repeat, no-repeat;
+    background-size: auto, contain, cover;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 9%;
+    margin-top: 10px;
+}
+
+.lang-list {
+    width: 8%;
+}
+
+.top-menu {
+    width: 60%;
+    z-index: 2;
+}
+
+.contacts {
+    width: 23%;
+    margin-bottom: 9px;
+    text-align: right;    
+    z-index: 2;
+    color: #ffffff;
+    font-family: Montserrat;
+
+    .messengers,
+    .tel-number,
+    .callback-order {
+        display: block;
+    }
+}
+
+.lang-item,
+.choose-lang,
+.menu-item,
+.messengers-item {
+    display: inline;
+    color: #ffffff;
+    font-family: 'Montserrat';
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.menu-item {
+    margin-right: 50px;
+
+    a {
+        text-decoration: none;
+        color: #ffffff;
+
+        &:hover {
+            color: #00ffad;
+            cursor: pointer;
+            position: relative;        
+            
+            &::before {
+                content: "";
+                width: 1px;
+                height: 40px;
+                background-color: #00ffad;
+                position: absolute;
+                left: 50%;
+                top: -55px;
+                animation: menu-hover 0.5s linear;
+            } 
+        }
+    }
+
+    @keyframes menu-hover {
+        0% {
+            left: 50%; 
+            top: -85px;
+        }
+        
+        100% {
+            left: 50%;
+            top: -55px;
+        }
+    }
+}
+
+.lang-item,
+.choose-lang {
+    font-size: 10px;
+    font-weight: 600;
+    border: none;
+    background: none;
+
+    &:hover {
+        color: #00ffad;
+        cursor: pointer;
+    }
+}
+
+.messengers-item {
+    margin-left: 20px;
+    color: #ffffff;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: initial;
+    position: relative;    
+}
+
+.messengers-links {
+    color: #ffffff;
+    text-decoration: none;
+
+    &:hover {
+        color: #00ffad;
+        cursor: pointer;
+    }
+}
+
+.messengers-item:nth-child(2)::before,
+.messengers-item:nth-child(3)::before {
+    content: '';
+    width: 7px;
+    height: 7px;
+    box-shadow: 0 2px 4px rgba(102, 92, 172, 0.5);
+    background-color: #665cac;
+    border-radius: 50%;
+    position: absolute;
+    top: 4px;
+    right: 37px;
+}
+
+.messengers-item:nth-child(3)::before {
+    box-shadow: 0 2px 4px rgba(44, 183, 66, 0.5);
+    background-color: #2cb742;
+    right: 67px;
+}
+
+.online-status {
+    opacity: 0.5;
+    font-size: 8px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.tel-number {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin: 9px 0 4px;
+
+    .bold-part {
+        font-weight: 700;
+    }
+}
+
+.callback-order {
+    color: #00ffad;
+    font-size: 12px;
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+.intro-text-block {
+    width: 540px;
+    height: 600px;
+    margin-top: 60px;
+    margin-left: 100px;
+    z-index: 1;
+    color: #ffffff;
+}
+
+.copter-img {
+    position: relative;
+    width: 0;
+    height: 0;
+
+    &::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        background-image: url(../img/copter.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        
+        width: 550px;
+        height: 550px;
+        top: -80px;
+        left: 460px;
+    }
+}
+
+.heading-first {
+    opacity: 0.9;    
+    font-family: "Bebas Neue Bold"; 
+    font-size: 140px;
+    font-weight: 700;
+    line-height: 115px;
+    text-transform: uppercase;
+    display: block;
+    margin: 10px 0 -25px;
+}
+
+.weather-info {
+    opacity: 0.7;
+    display: block;
+    margin-left: 4px;
+    font-family: "Bebas Neue Regular";
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.weather-icon {
+    margin: 0 15px;
+}
+
+.temp {
+    font-family: "Bebas Neue Book";
+    font-size: 26px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.heading-second {
+    opacity: 0.8;
+    font-family: "Bebas Neue Bold";
+    font-size: 90px;
+    font-weight: 700;
+}
+
+.intro-text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23px;
+    font-family: "Montserrat";
+    font-weight: 200;
+    width: 60%; 
+
+    .intro-bold {
+        font-weight: 700;
+    }
+}
+
+.intro-video-on {
+    color: #00ffad;
+    font-family: "Bebas Neue Regular";
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    border: 0;
+    background: none;
+    margin: 38px 0 0 60px;
+
+    .play-icon {
+        position: absolute;
+        margin-left: -30px; 
+        margin-top: 1px;
+    }
+
+    @keyframes button-puls {
+        0% {
+            width: 80px;
+            height: 80px;
+            opacity: 1;
+            top: -28px;
+            left: -63px;
+        }
+        
+        100% {
+            width: 170px;
+            height: 170px;
+            opacity: 0;
+            top: -73px;
+            left: -108px;
+        }
+    }
+
+    .play-button {
+        position: relative;
+
+        &::before,
+        &::after,
+        .for-pseudo::before,
+        .for-pseudo::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border: 1px solid #ffffff;
+            border-radius: 50%;
+            opacity: 0.2;
+            top: -28px;
+            left: -114px;
+        }
+
+        &::after,
+        .for-pseudo::before,
+        .for-pseudo::after {
+            top: -28px;
+            left: - 63px;
+            animation: button-puls infinite 2.5s;
+            animation-delay: .2s;       
+        }
+
+        .for-pseudo::before {
+            animation-delay: .6s;
+        }
+
+        .for-pseudo::after {
+            animation-delay: 1s;
+        }
+    }
+}
