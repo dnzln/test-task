@@ -240,14 +240,12 @@ ul {
     width: 0;
     height: 0;
 
-    &::after {
+    &::before {
         content: '';
         position: absolute;
-        z-index: -1;
         background-image: url(../img/copter.png);
         background-repeat: no-repeat;
-        background-size: contain;
-        
+        background-size: contain;        
         width: 550px;
         height: 550px;
         top: -80px;
